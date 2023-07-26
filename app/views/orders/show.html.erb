@@ -2,7 +2,32 @@
 
   <header class="page-header">
     <h1>Order #<%= @order.id %></h1>
+    
+    <p><strong>Total:</strong> <%=humanized_money_with_symbol @order.total_cents / 100.0 %></p>
+    <p><strong>Order email:</strong> <%= @order.email %></p>
   </header>
+
+  <div class="panel panel-default items">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th colspan="2">Product</th>
+          <th>Unit Price</th>
+          <th>Quantity</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      
+      <tbody>
+        <% @line_items.each do |line_item| %>
+          <%= render 'line',
+          product: @products.find{ |product| product.id == line_item.product_id },
+          line_item: line_item %>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+  
 
   <div class="order-summary jumbotron">
     <h4>Thank you for your order!</h4>
