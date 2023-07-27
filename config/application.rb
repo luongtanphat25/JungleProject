@@ -18,5 +18,10 @@ module New
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+
+    # config.middleware.use Rack::Auth::Basic, "Your Realm" do |username, password|
+    #   # Replace the condition below with your own authentication logic.
+    #   username == ENV['USERNAME'] && password == ENV['PASSWORD']
+    # end
   end
 end
