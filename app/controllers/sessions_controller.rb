@@ -3,8 +3,8 @@ class SessionsController < ApplicationController
   end
 
   def create
-    email = params[:session][:email]
-    password = params[:session][:password]
+    email = params[:email]
+    password = params[:password]
 
     user = User.authenticate_with_credentials(email, password)
 

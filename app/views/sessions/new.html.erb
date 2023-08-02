@@ -1,11 +1,11 @@
 <h1>Log In</h1>
 
-<%= form_with url: sessions_path do |form| %>
-  <%= form.label :email %>
-  <%= form.email_field :email %>
+<%= form_with(url: session_create_path, class: "div") do |form| %>
+  <%= form.label(:email, class: "form-label")  %>
+  <%= form.email_field(:email, class: "form-control")  %>
 
-  <%= form.label :password %>
-  <%= form.password_field :password %>
+  <%= form.label(:password, class: "form-label") %>
+  <%= form.password_field(:password, class: "form-control") %>
 
-  <%= form.submit 'Log In' %>
+  <%= form.submit(class: "btn btn-primary mt-3", value: 'Log In')  %>
 <% end %>

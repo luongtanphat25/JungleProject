@@ -9,14 +9,18 @@
   </div>
 
   <div class="panel panel-default products">
-    <ul>
-      <% @categories.each do |category| %>
-        <li>
-          <%= category.name %>
-          <%= link_to fa_icon('trash'), [:admin, category], class: 'btn btn-sm btn-danger', method: :delete, data: { confirm: "Are you sure?" } %>
-          </li>
-      <% end %>
-    </ul>
+    <table class="table">
+      <tbody>
+        <% @categories.each do |category| %>
+          <tr>
+            <td><%= category.name %></td>
+            <td class="text-end">
+              <%= link_to fa_icon('trash'), [:admin, category], class: 'btn btn-sm btn-danger', method: :delete, data: { confirm: "Are you sure?" } %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
   </div>
 
 </section>
