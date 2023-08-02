@@ -1,4 +1,8 @@
 # Jungle
+## Screenshots
+!["Home Page"](https://github.com/luongtanphat25/JungleProject/blob/master/docs/1.png)
+!["Detail Page"](https://github.com/luongtanphat25/JungleProject/blob/master/docs/2.png)
+!["Admin-Products Page"](https://github.com/luongtanphat25/JungleProject/blob/master/docs/3.png)
 
 A mini e-commerce application built with Rails 6.1 for purposes of teaching Rails by example.
 
@@ -30,5 +34,3 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 - PostgreSQL 9.x
 - Stripe
 
-
-##Screenshots
